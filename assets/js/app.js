@@ -4,7 +4,7 @@ cheapSeatApp.controller('DealListController', ['$scope', '$http', function($scop
     $http.get('https://cors-anywhere.herokuapp.com/http://iwantthatflight.com.au/deals.aspx?format=xml&afid=2361')
     .then(function(response) {
 	var xml = response.data;
-	var json = xml2json(xml.replace("&", "&amp;"), " ");   
+	var json = xml.replace("&", "&amp;");   
         console.log(xml);
         console.log(json);
         $scope.deals = json;
