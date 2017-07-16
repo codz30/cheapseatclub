@@ -65,7 +65,7 @@
 								<p></p>
 							</header>
 							<section class="tiles" ng-controller="DealListController">
-								<article class="style{{$index + 1}}" ng-repeat="deal in deals">
+								<article class="style{{($index  + 1) % 6}}" ng-repeat="deal in deals">
 									<span class="image">
 										<img src="{{deal.image}}" alt="" />
 									</span>
