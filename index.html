@@ -4,7 +4,7 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<html>
+<html ng-app="cheapSeatApp">
 	<head>
 		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -64,6 +64,15 @@
 								<h1>Sweet Flights, Cheap Seats</h1>
 								<p></p>
 							</header>
+							<div ng-controller="DealListController">
+								  <ul>
+    								<li ng-repeat="deal in deals">
+     									<span>{{deal.name}}</span>
+      										<p>{{deal.snippet}}</p>
+    								</li>
+  								</ul>
+							</div>
+
 							<section class="tiles">
 								<article class="style1">
 									<span class="image">
