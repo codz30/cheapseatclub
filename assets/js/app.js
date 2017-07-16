@@ -12,8 +12,8 @@ cheapSeatApp.controller('DealListController', ['$scope', '$http', function($scop
         }, function(response) {
           $scope.data = response.data || 'Request failed';
           $scope.status = response.status;
+          $scope.deals = xml2json($scope.data, " ");
      });
-    $scope.deals = xml2json($scope.data, " ");
 }]);
 
 
