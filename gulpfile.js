@@ -3,6 +3,7 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
+let cleanCSS = require('gulp-clean-css');
 var sourcemaps = require('gulp-sourcemaps');
 var del = require('del');
 
@@ -19,6 +20,9 @@ gulp.task('clean', function() {
 gulp.task('sass', function () {
   return gulp.src(paths.sass)
     .pipe(sass().on('error', sass.logError))
+    .pipe(sourcemaps.init())
+    .pipe(cleanCSS({compatibility: 'ie8'}))
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest('./assets/css'));
 });
  
