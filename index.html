@@ -65,9 +65,9 @@
 								<p></p>
 							</header>
 							<section class="tiles" ng-controller="DealListController">
-								<article class="style1" ng-repeat="deal in deals">
+								<article class="style{{$index + 1}}" ng-repeat="deal in deals">
 									<span class="image">
-										<img src="images/pic01.jpg" alt="" />
+										<img src="{{deal.image}}" alt="" />
 									</span>
 									<a href="{{deal.url}}">
 										<h2>{{deal.title}}</h2>
