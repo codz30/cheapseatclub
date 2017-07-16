@@ -7,7 +7,8 @@ cheapSeatApp.controller('DealListController', ['$scope', '$http', function($scop
 	var json = xml.replace(/&/, "&amp;");   
         console.log(xml);
         console.log(json);
-        $scope.deals = json;
+	console.log(xml2json(json, " "));   
+        $scope.deals = xml2json(json, " ");
     });
 }]);
 
