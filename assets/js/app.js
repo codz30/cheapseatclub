@@ -13,4 +13,4 @@ cheapSeatApp.controller('DealListController', ['$scope', function($scope) {
       snippet: 'The Next, Next Generation tablet.'
     }
   ];
-});
+}]);
