@@ -64,24 +64,15 @@
 								<h1>Sweet Flights, Cheap Seats</h1>
 								<p></p>
 							</header>
-							<div ng-controller="DealListController">
-								  <ul>
-    								<li ng-repeat="deal in deals">
-     									<span>{{deal.name}}</span>
-      										<p>{{deal.snippet}}</p>
-    								</li>
-  								</ul>
-							</div>
-
-							<section class="tiles">
-								<article class="style1">
+							<section class="tiles" ng-controller="DealListController">
+								<article class="style1" ng-repeat="deal in deals">
 									<span class="image">
 										<img src="images/pic01.jpg" alt="" />
 									</span>
-									<a href="generic.html">
-										<h2>Magna</h2>
+									<a href="{{deal.url}}">
+										<h2>{{deal.title}}</h2>
 										<div class="content">
-											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+											<p>{{deal.description}}</p>
 										</div>
 									</a>
 								</article>
