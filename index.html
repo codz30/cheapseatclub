@@ -68,7 +68,7 @@
 								<div class="spinner" ng-show="loading">Loading...</div>
 								<article class="style{{($index  + 1) % 6}}" ng-repeat="deal in deals" *ng-show="loading">
 									<span class="image">
-										<img src="{{deal.image}}" alt="" />
+										<img ng-src="{{deal.image}}" alt="" />
 									</span>
 									<a href="{{deal.url}}">
 										<h2>{{deal.title}}</h2>
