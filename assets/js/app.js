@@ -1,7 +1,7 @@
 var cheapSeatApp = angular.module('cheapSeatApp', []);
 
 cheapSeatApp.controller('DealListController', ['$scope', '$http', function($scope, $http) {
-    $http.get('http://iwantthatflight.com.au/deals.aspx?format=xml&afid=2361')
+    $http.jsonp('http://iwantthatflight.com.au/deals.aspx?format=xml&afid=2361')
     .then(function(response) {
         console.log(response.data);
         console.log(xml2json(response.data));
