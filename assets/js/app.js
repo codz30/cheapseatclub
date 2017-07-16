@@ -5,6 +5,6 @@ cheapSeatApp.controller('DealListController', ['$scope', '$http', function($scop
     .then(function(response) {
 	var x2js = new X2JS();
 	var xml = response.data.replace(/&/g, "&amp;");   
-        $scope.deals = x2js.xml_str2json(xml);
+        $scope.deals = x2js.xml_str2json(xml).deals.deal;
     });
 }]);
