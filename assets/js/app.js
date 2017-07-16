@@ -3,12 +3,13 @@ var cheapSeatApp = angular.module('cheapSeatApp', []);
 cheapSeatApp.controller('DealListController', ['$scope', '$http', function($scope, $http) {
     $http.get('https://cors-anywhere.herokuapp.com/http://iwantthatflight.com.au/deals.aspx?format=xml&afid=2361')
     .then(function(response) {
+	var x2js = new X2JS();
 	var xml = response.data;
 	var json = xml.replace(/&/g, "&amp;");   
         console.log(xml);
         console.log(json);
-	console.log(xml2json(json, " "));   
-        $scope.deals = xml2json(json, " ");
+	console.log(x2js.xml_str2json(json));   
+        $scope.deals = x2js.xml_str2json(json);
     });
 }]);
 
