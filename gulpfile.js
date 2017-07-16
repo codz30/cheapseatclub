@@ -20,10 +20,13 @@ gulp.task('clean', function() {
 gulp.task('sass', function () {
   return gulp.src(paths.sass)
     .pipe(sass().on('error', sass.logError))
-    .pipe(sourcemaps.init())
-    .pipe(cleanCSS({compatibility: 'ie8'}))
-    .pipe(sourcemaps.write())
     .pipe(gulp.dest('./assets/css'));
+});
+
+gulp.task('minify-css', function () {
+  return gulp.src('assets/css/*.css')
+    .pipe(cleanCSS({compatibility: 'ie8'}))
+    .pipe(gulp.dest('assets/css'));
 });
  
 gulp.task('scripts', ['clean'], function() {
@@ -42,5 +45,5 @@ gulp.task('watch', function() {
   gulp.watch(paths.sass, ['sass']);
 });
 
-gulp.task('default', ['scripts', 'sass']);
+gulp.task('default', ['scripts', 'sass', 'minify-css']);
 
