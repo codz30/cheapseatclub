@@ -1,6 +1,6 @@
 var cheapSeatApp = angular.module('cheapSeatApp', []);
 
-cheapSeatApp.controller('DealListController', function DealListController($scope) {
+cheapSeatApp.controller('DealListController', ['$scope', function($scope) {
   $scope.deals = [
     {
       name: 'Nexus S',
