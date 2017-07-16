@@ -38,5 +38,5 @@ gulp.task('watch', function() {
   gulp.watch(paths.sass, ['sass']);
 });
 
-gulp.task('default', ['watch', 'scripts', 'sass']);
+gulp.task('default', ['scripts', 'sass']);
 
