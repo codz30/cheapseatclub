@@ -4,6 +4,6 @@
     return;
   }
   else {
-    echo "<html><head><title>Redirecting...</title><body>Redirecting to " + $url + "</body></html>;
+    echo "<html><head><title>Redirecting...</title><body>Redirecting to " + $url + "</body></html>";
   }
 ?>
