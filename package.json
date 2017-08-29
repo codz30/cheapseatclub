@@ -1,0 +1,33 @@
+{
+  "name": "cheapseatclub",
+  "version": "1.0.0",
+  "description": "Cheap Seat Club",
+  "main": "app.js",
+  "dependencies": {
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.7.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.0",
+    "gulp-uglify": "^3.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codz30/cheapseatclub.git"
+  },
+  "keywords": [
+    "cheap",
+    "seat"
+  ],
+  "author": "Max Eisenhardt",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/codz30/cheapseatclub/issues"
+  },
+  "homepage": "https://github.com/codz30/cheapseatclub#readme"
+}
