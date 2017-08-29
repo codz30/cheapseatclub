@@ -43,10 +43,6 @@
 								</nav>
 
 						</div>
-							<div class = "inner">
-							<label for = "sign-up">Sign up for email notifications:</label>	
-							<input type = "email" placeholder="me@myemail.com">
-							</div>
 					</header>
 
 				<!-- Menu -->
@@ -60,6 +56,10 @@
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
+							<header>
+								<label for = "sign-up">Sign up for email notifications:</label>	
+								<input id = "sign-up" type = "email" placeholder="me@myemail.com">
+							</header>
 							<section class="tiles" ng-controller="DealListController">
 								<div class="spinner" ng-show="loading">Loading...</div>
 								<article class="style{{($index  + 1) % 6}}" ng-repeat="deal in deals" *ng-show="loading">
